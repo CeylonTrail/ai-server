@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from app.models.chatbot import ChatbotRequest
+from app.models import ChatbotRequest
 from app.services.chatbot_service import process_chatbot_input
 
 router = APIRouter()
