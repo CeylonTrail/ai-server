@@ -1,7 +1,8 @@
 fastapi
 uvicorn
+python-dotenv
 pydantic
 langchain
-langchain-chroma
 langchain-openai
-python-dotenv
+psycopg2
+pinecone-client

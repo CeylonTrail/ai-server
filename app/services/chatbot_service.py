@@ -7,10 +7,12 @@ from langchain_core.output_parsers import StrOutputParser
 
 dotenv.load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+LLM_MODEL = os.getenv("LLM_MODEL")
+LLM_TEMPERATURE = os.getenv("LLM_TEMPERATURE")
 
 llm = ChatOpenAI(
-    model="gpt-3.5-turbo",
-    temperature=0,
+    model=LLM_MODEL,
+    temperature=LLM_TEMPERATURE,
     api_key=OPENAI_API_KEY
 )
 
