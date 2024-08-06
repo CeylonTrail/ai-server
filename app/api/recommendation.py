@@ -7,7 +7,7 @@ router = APIRouter()
 @router.post("/")
 async def recommendations(request: RecommendationRequest):
     try:
-        return RecommendationResponse(perform_similarity_search(request.interests))
+        return RecommendationResponse(recommended_place_ids=perform_similarity_search(request.interests))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
